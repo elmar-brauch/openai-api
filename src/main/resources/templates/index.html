@@ -1,0 +1,29 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:fragment="head">
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+	<title>ChatGPT & Spring demo</title>
+	<link rel="stylesheet" th:href="@{/css/main.css}" />
+</head>
+<body>
+	<main role="main" class="container">
+		<div class="starter-template">
+			<h1>Spring & ChatGPT demo</h1>
+			<h2>Send message to ChatGPT</h2>
+			<form th:action="@{/}" method="post">
+			    <fieldset>
+			        <div class="form-group">
+			            <input type="text" name="message" th:value="${request}" required autofocus/>
+			        </div>
+			        <div class="row">
+			            <input type="submit" value="Send" />
+			        </div>
+			    </fieldset>
+			</form>
+			<h2 th:if="${response != null}" >ChatGPT responded with: </h2>
+			<p th:if="${response != null}" th:text="${response}" />
+		</div>
+	</main>
+</body>
+</html>
