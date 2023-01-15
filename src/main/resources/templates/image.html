@@ -3,15 +3,15 @@
 <head th:fragment="head">
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-	<title>ChatGPT & Spring demo</title>
+	<title>DALL-E & Spring demo</title>
 	<link rel="stylesheet" th:href="@{/css/main.css}" />
 </head>
 <body>
 	<main role="main" class="container">
 		<div class="starter-template">
-			<h1>ChatGPT API at<br/>agile-coding.blogspot.com</h1>
-			<h2>Send message to ChatGPT</h2>
-			<form th:action="@{/}" method="post">
+			<h1>DALL-E API at<br/>agile-coding.blogspot.com</h1>
+			<h2>Describe image</h2>
+			<form th:action="@{/image}" method="post">
 			    <fieldset>
 			        <div class="form-group">
 			            <input type="text" name="prompt" th:value="${request}" required autofocus/>
@@ -21,8 +21,8 @@
 			        </div>
 			    </fieldset>
 			</form>
-			<h2 th:if="${response != null}" >ChatGPT responded with: </h2>
-			<p th:if="${response != null}" th:text="${response}" />
+			<h2 th:if="${imageUri != null}" >DALL-E draw for you: </h2>
+			<img th:if="${imageUri != null}" th:src="${imageUri}" alt="Picture drawn by DALL-E" />
 		</div>
 	</main>
 </body>

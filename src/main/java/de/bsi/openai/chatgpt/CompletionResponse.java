@@ -1,4 +1,4 @@
-package de.bsi.chatgpt;
+package de.bsi.openai.chatgpt;
 
 import java.util.List;
 import java.util.Optional;

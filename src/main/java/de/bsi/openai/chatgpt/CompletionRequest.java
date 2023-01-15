@@ -1,4 +1,4 @@
-package de.bsi.chatgpt;
+package de.bsi.openai.chatgpt;
 
 public record CompletionRequest(String model, String prompt, 
 		double temperature, int max_tokens) {
