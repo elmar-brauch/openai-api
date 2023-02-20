@@ -7,8 +7,9 @@
 * Create API key at https://beta.openai.com/account/api-keys
 * Store the key in application.properties file in cloned project.
 * Start it as Spring Boot application.
-* For chatting with ChatGPT: http://localhost:8080/
-* For drawing images with DALL-E: http://localhost:8080/image
+* Browser opens index.html automatically, hosted at:
+  * http://localhost:8080/ (for chatting with ChatGPT)
+  * http://localhost:8080/image (for drawing images with DALL-E)
 
 ## Setup proxy
 If you need a proxy to communicate with Internet (ChatGPT API is in Internet), adapt ChatGptController.java like this:
