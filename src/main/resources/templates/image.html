@@ -1,28 +1,36 @@
 <!DOCTYPE HTML>
 <html xmlns:th="http://www.thymeleaf.org">
 <head th:fragment="head">
-	<meta charset="utf-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-	<title>DALL-E & Spring demo</title>
-	<link rel="stylesheet" th:href="@{/css/main.css}" />
+<meta charset="utf-8" />
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+<title>DALL-E & Spring demo</title>
+<link rel="stylesheet" th:href="@{/css/main.css}" />
 </head>
 <body>
 	<main role="main" class="container">
+		<div>
+			<a href="http://localhost:8080"> Use ChatGPT</a>
+		</div>
 		<div class="starter-template">
-			<h1>DALL-E API at<br/>agile-coding.blogspot.com</h1>
+			<h1>
+				DALL-E API at<br />agile-coding.blogspot.com
+			</h1>
 			<h2>Describe image</h2>
 			<form th:action="@{/image}" method="post">
-			    <fieldset>
-			        <div class="form-group">
-			            <input type="text" name="prompt" th:value="${request}" required autofocus/>
-			        </div>
-			        <div class="row">
-			            <input type="submit" value="Send" />
-			        </div>
-			    </fieldset>
+				<fieldset>
+					<div class="form-group">
+						<input type="text" name="prompt" th:value="${request}" required
+							autofocus />
+					</div>
+					<div class="row">
+						<input type="submit" value="Send" />
+					</div>
+				</fieldset>
 			</form>
-			<h2 th:if="${imageUri != null}" >DALL-E draw for you: </h2>
-			<img th:if="${imageUri != null}" th:src="${imageUri}" alt="Picture drawn by DALL-E" />
+			<h2 th:if="${imageUri != null}">DALL-E draw for you:</h2>
+			<img th:if="${imageUri != null}" th:src="${imageUri}"
+				alt="Picture drawn by DALL-E" />
 		</div>
 	</main>
 </body>
